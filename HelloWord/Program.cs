@@ -64,7 +64,7 @@ namespace HelloWord
 			Console.ReadLine();*/
 
 			// Reversing the string 
-			String zig = "Hello,Bob.How are you?";
+			/*String zig = "Hello,Bob.How are you?";
 			Console.WriteLine(zig);
 			char[] charArrayOfZig = zig.ToCharArray();
 			Array.Reverse(charArrayOfZig);
@@ -72,45 +72,37 @@ namespace HelloWord
 			{
 				Console.Write(item);
 			}
+			Console.ReadLine();*/
+
+			// Example of function
+			Console.WriteLine("The Name Game:");
+
+			Console.Write("What is your first name?");
+			string firstName = Console.ReadLine();
+
+			Console.Write("What is your last name?");
+			string lastName = Console.ReadLine();
+
+			Console.Write("Which city your born?");
+			string cityName = Console.ReadLine();
+
+			displayString(reverString(firstName), reverString(lastName),reverString(cityName));
 			Console.ReadLine();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 		}
+
+		private static string reverString(string msg)
+		{
+			char[] messageArray = msg.ToCharArray();
+			Array.Reverse(messageArray);
+			return String.Concat(messageArray);
+		}
+
+		private static void displayString(string msg1, string msg2, string msg3)
+		{
+			Console.Write("Result of reversing string :  ");
+			Console.Write(String.Format("{0} {1} {2}", msg1, msg2, msg3));
+		}
+
+
 	}
 }
